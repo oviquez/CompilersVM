@@ -6,7 +6,7 @@ namespace Minics.exe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Angelo!");
+            Console.WriteLine("Hello Angelo! aaa");
         }
     }
 }
