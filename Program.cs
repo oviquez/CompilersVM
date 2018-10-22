@@ -6,7 +6,9 @@ namespace Minics.exe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Angelo! TEST 2.1 403 - 404 ERROR");
+            // dotnet run: correr c#
+            Almacen almacen = new Almacen("almacen");
+            Console.WriteLine(almacen.nombre);
         }
     }
 }
