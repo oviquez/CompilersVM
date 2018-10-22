@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\Minics.exe.csproj",
+      "projectUniqueName": "c:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\Minics.exe.csproj",
       "projectName": "Minics.exe",
-      "projectPath": "C:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\Minics.exe.csproj",
+      "projectPath": "c:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\Minics.exe.csproj",
       "packagesPath": "C:\\Users\\Usuario.ANGELO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\obj\\",
+      "outputPath": "c:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
