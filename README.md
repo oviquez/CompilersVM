@@ -12,7 +12,7 @@ de la máquina virtual. Debe considerar principalmente usar dos tipos de element
 
 3) Módulo ALMACEN: permite almacenar tuplas de variables y valores (enteros y chars) que serán utilizados por el intérprete para
 resolver las operaciones de busqueda y almacenamiento de identificadores. Así mismo debe almacenar referencias a métodos que 
-deben llevar la "dirección" en el código que tiene dicho método.
+deben llevar la "dirección" en el código que tiene dicho método.(Angelo, Felipe, Kevin, Emilio, Katherine, Cristian y Víquez)
 
 4) Módulo INSTR-SET: donde se implemengarán los métodos para implementar/ejecutar cada instrucción del lenguaje. Harán uso de los 
 tres módulos anteriores
