@@ -16,4 +16,9 @@ public class Almacen{
     {
         this.nombre = nombre;
     }
+
+    public void alamcenar(){}
+
+    public void busqueda(){}
+    
 }
