@@ -681,30 +681,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario.ANGELO\\.nuget\\packages\\": {},
+    "C:\\Users\\CHRISTIAN\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\Minics.exe.csproj",
+      "projectUniqueName": "c:\\Users\\CHRISTIAN\\Documents\\TEC\\2018 II SEM\\COMPI\\PROYECTO 2\\Minics.exe\\Minics.exe.csproj",
       "projectName": "Minics.exe",
-      "projectPath": "c:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\Minics.exe.csproj",
-      "packagesPath": "C:\\Users\\Usuario.ANGELO\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Usuario.ANGELO\\Desktop\\GitKraken\\Minics.exe\\obj\\",
+      "projectPath": "c:\\Users\\CHRISTIAN\\Documents\\TEC\\2018 II SEM\\COMPI\\PROYECTO 2\\Minics.exe\\Minics.exe.csproj",
+      "packagesPath": "C:\\Users\\CHRISTIAN\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\CHRISTIAN\\Documents\\TEC\\2018 II SEM\\COMPI\\PROYECTO 2\\Minics.exe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario.ANGELO\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\CHRISTIAN\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
