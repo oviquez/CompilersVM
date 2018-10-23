@@ -9,6 +9,28 @@ public class Almacen{
     Así mismo debe almacenar referencias a métodos que deben llevar la "dirección" en el código que tiene dicho método.
      */
 
+     //Notas: 
+     /* 
+        hacer una instancia de variables globales y locales.
+        callfuntion: es el metodo mas complejo debido a que tiene que volver su metodo original
+    */
+
+
+    /*
+     0 DEF inter
+     void inter(){
+         1 PUSH_LOCAL_I X 
+         int x; # cuano se almacena se agrega un clave valor = 0; en caso de ser char ='';
+        
+         2 PUSH_LOCAL_I Y
+         int y;#igual que arriba
+
+         3 PUSH_LOCAL_I
+     }
+
+     */
+    
+
      // PRELIMINARY DATA STRUCTURE:
     Dictionary<string, dynamic> test;
 
