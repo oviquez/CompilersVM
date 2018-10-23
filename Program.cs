@@ -21,6 +21,9 @@ namespace Minics.exe
             almacen.updateValue("KEY 2", 666);
             almacen.getValue("KEY 2");
         // ------------------------------------
+
+            Desensamblador desensamblador = new Desensamblador();
+            desensamblador.desensamblar("desensamblador_codigo/text.txt");
         }
     }
 }
