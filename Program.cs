@@ -1,5 +1,7 @@
 ﻿using System;
 using InstructionsNameSpace;
+using AlmacenNameSpace;
+using DesensambladorNameSpace;
 
 
 namespace Minics.exe
