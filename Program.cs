@@ -1,4 +1,5 @@
 ﻿using System;
+using InstructionsNameSpace;
 
 
 namespace Minics.exe
@@ -24,6 +25,11 @@ namespace Minics.exe
 
             Desensamblador desensamblador = new Desensamblador();
             desensamblador.desensamblar("desensamblador_codigo/text.txt");
+
+        //------------------------------------   
+
+            InstructionSet instructionSet = new InstructionSet();
+            instructionSet.run(); 
         }
     }
 }

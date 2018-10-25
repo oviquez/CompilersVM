@@ -9,17 +9,6 @@ C:/Users/Usuario.ANGELO/Desktop/GitKraken/Minics.exe/obj/Debug/netcoreapp2.1/Min
 C:/Users/Usuario.ANGELO/Desktop/GitKraken/Minics.exe/obj/Debug/netcoreapp2.1/Minics.exe.AssemblyInfo.cs
 C:/Users/Usuario.ANGELO/Desktop/GitKraken/Minics.exe/obj/Debug/netcoreapp2.1/Minics.exe.dll
 C:/Users/Usuario.ANGELO/Desktop/GitKraken/Minics.exe/obj/Debug/netcoreapp2.1/Minics.exe.pdb
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/bin/Debug/netcoreapp2.1/Minics.exe.deps.json
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/bin/Debug/netcoreapp2.1/Minics.exe.runtimeconfig.json
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/bin/Debug/netcoreapp2.1/Minics.exe.runtimeconfig.dev.json
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/bin/Debug/netcoreapp2.1/Minics.exe.dll
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/bin/Debug/netcoreapp2.1/Minics.exe.pdb
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/obj/Debug/netcoreapp2.1/Minics.exe.csprojAssemblyReference.cache
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/obj/Debug/netcoreapp2.1/Minics.exe.csproj.CoreCompileInputs.cache
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/obj/Debug/netcoreapp2.1/Minics.exe.AssemblyInfoInputs.cache
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/obj/Debug/netcoreapp2.1/Minics.exe.AssemblyInfo.cs
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/obj/Debug/netcoreapp2.1/Minics.exe.dll
-C:/Users/oviquez/Documents/00.Cursos/Compiladores (IC-5701)/2018/II Semestre/VM_CS/obj/Debug/netcoreapp2.1/Minics.exe.pdb
 C:/Users/CHRISTIAN/Documents/TEC/2018 II SEM/COMPI/PROYECTO 2/Minics.exe/bin/Debug/netcoreapp2.1/Minics.exe.deps.json
 C:/Users/CHRISTIAN/Documents/TEC/2018 II SEM/COMPI/PROYECTO 2/Minics.exe/bin/Debug/netcoreapp2.1/Minics.exe.runtimeconfig.json
 C:/Users/CHRISTIAN/Documents/TEC/2018 II SEM/COMPI/PROYECTO 2/Minics.exe/bin/Debug/netcoreapp2.1/Minics.exe.runtimeconfig.dev.json
@@ -42,3 +31,14 @@ C:/Users/CHRISTIAN/Documents/TEC/2018 II SEM/COMPI/PROYECTO 2/Minics.exe/obj/Deb
 /home/fabiancastrob/Repos/Minics.exe/obj/Debug/netcoreapp2.1/Minics.exe.AssemblyInfo.cs
 /home/fabiancastrob/Repos/Minics.exe/obj/Debug/netcoreapp2.1/Minics.exe.dll
 /home/fabiancastrob/Repos/Minics.exe/obj/Debug/netcoreapp2.1/Minics.exe.pdb
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\netcoreapp2.1\Minics.exe.deps.json
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\netcoreapp2.1\Minics.exe.runtimeconfig.json
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\netcoreapp2.1\Minics.exe.runtimeconfig.dev.json
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\netcoreapp2.1\Minics.exe.dll
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\netcoreapp2.1\Minics.exe.pdb
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.csprojAssemblyReference.cache
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.csproj.CoreCompileInputs.cache
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.AssemblyInfoInputs.cache
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.AssemblyInfo.cs
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.dll
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.pdb
