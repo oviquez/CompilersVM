@@ -45,7 +45,6 @@ namespace InstructionsNameSpace{
         public void runDEF(string name){
 
         }
-        // SI ALGUIEN SABE PORQUE DA ESTE ERROR CON ESTOS DOS MÉTODOS, FAVOR CORREGIR!!!
         public void runLOAD_CONST(dynamic constant){
             //carga en la pila el valor entero contenido en "constant"
             pilaExprs.push(constant);
@@ -67,7 +66,7 @@ namespace InstructionsNameSpace{
             //almacena el contenido del tope de la pila en el almacén GLOBAL para la variable "varname"
             dynamic tope=0;
             tope = pilaExprs.pop(); //debe sacar el elemento de la pila y devolver su valor
-            almacenLocal.updateValue(varname,tope);
+            almacenGlobal.updateValue(varname,tope);
         }
         public void runLOAD_GLOBAL(string varname){
             //busca en el almacén GLOBAL el valor asociado a "varname" y lo inserta en la pila
@@ -158,8 +157,10 @@ namespace InstructionsNameSpace{
                 instSet[actualInstrIndex].Key.Equals("DEF")){
                     switch(instSet[actualInstrIndex].Key){
                         case "PUSH_GLOBAL_I": 
+                            almacenGlobal.setValue(instSet[actualInstrIndex].Value,0);                            
+                            break;
                         case "PUSH_GLOBAL_C": 
-                            almacenGlobal.setValue(instSet[actualInstrIndex].Key,instSet[actualInstrIndex].Value);                            
+                            almacenGlobal.setValue(instSet[actualInstrIndex].Value,' ');                            
                             break;
                         case "DEF": 
                             if (instSet[actualInstrIndex].Value.Equals("Main")){
