@@ -17,6 +17,7 @@ namespace InstructionsNameSpace{
             instSet = new List<KeyValuePair<string,dynamic>>() ;
             almacenGlobal = new Almacen("Global");
             almacenLocal = new Almacen("Local");
+            pilaExprs = new Pila();
             actualInstrIndex=0;
             test();
         }
@@ -45,13 +46,10 @@ namespace InstructionsNameSpace{
 
         }
         // SI ALGUIEN SABE PORQUE DA ESTE ERROR CON ESTOS DOS MÉTODOS, FAVOR CORREGIR!!!
-        /* public void runLOAD_CONST(int const){
-            //carga en la pila el valor entero contenido en "const"
-            int x =0;
+        public void runLOAD_CONST(dynamic constant){
+            //carga en la pila el valor entero contenido en "constant"
+            pilaExprs.push(constant);
         }
-        public void runLOAD_CONST(char const){
-            //carga en la pila el valor char contenido en "const"
-        }*/
         public void runLOAD_FAST(string varname){ //podría recibir el almacen del contexto en caso de que se requiera
             //busca en el almacén LOCAL el valor asociado a "varname" y lo inserta en la pila
             dynamic val;
@@ -69,7 +67,7 @@ namespace InstructionsNameSpace{
             //almacena el contenido del tope de la pila en el almacén GLOBAL para la variable "varname"
             dynamic tope=0;
             tope = pilaExprs.pop(); //debe sacar el elemento de la pila y devolver su valor
-            almacenLocal.setValue(varname,tope);
+            almacenLocal.updateValue(varname,tope);
         }
         public void runLOAD_GLOBAL(string varname){
             //busca en el almacén GLOBAL el valor asociado a "varname" y lo inserta en la pila
@@ -167,7 +165,7 @@ namespace InstructionsNameSpace{
                             if (instSet[actualInstrIndex].Value.Equals("Main")){
                                 actualInstrIndex++; //se incrementa para que contenga la primera línea de código del Main
                                 runMain();
-                                break; //espero que sea break del ciclo y no del switch
+                                return; //espero que sea break del ciclo y no del switch
                             }
                             break;
                         
@@ -197,8 +195,7 @@ namespace InstructionsNameSpace{
                             runPUSH_GLOBAL_C(instSet[actualInstrIndex].Value);
                             break;
                         case "LOAD_CONST":
-                            //asumiendo que el polimorfismo va a funcionar
-                            //runLOAD_CONST(instSet[actualInstrIndex].Value);
+                            runLOAD_CONST(instSet[actualInstrIndex].Value);
                             break;
                         case "LOAD_FAST":
                             runLOAD_FAST(instSet[actualInstrIndex].Value);
@@ -255,8 +252,8 @@ namespace InstructionsNameSpace{
                             runJUMP_IF_FALSE(instSet[actualInstrIndex].Value);
                             break;
                 }
-                actualInstrIndex++;
                 Console.WriteLine(instSet[actualInstrIndex].Key + " " + instSet[actualInstrIndex].Value); 
+                actualInstrIndex++; 
             }
         }
 
