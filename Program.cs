@@ -2,7 +2,8 @@
 using InstructionsNameSpace;
 using AlmacenNameSpace;
 using DesensambladorNameSpace;
-
+using moduloPila;
+using System.Collections;
 
 namespace Minics.exe
 {
@@ -23,6 +24,10 @@ namespace Minics.exe
             almacen.searchValue("KEY 2");
             almacen.updateValue("KEY 2", 666);
             almacen.getValue("KEY 2");
+
+          
+
+
         // ------------------------------------
 
             Desensamblador desensamblador = new Desensamblador();

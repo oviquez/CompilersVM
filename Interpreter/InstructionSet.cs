@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 using AlmacenNameSpace;
+using moduloPila;
 
 namespace InstructionsNameSpace{
     class InstructionSet
@@ -9,7 +10,7 @@ namespace InstructionsNameSpace{
         private List<KeyValuePair<string, dynamic>> instSet {get; set;}
         private Almacen almacenGlobal {get; set;} //se define un almacen global para manejo de variables globales y referencias a métodos
         private Almacen almacenLocal {get; set;} //se define un almacén local para variables locales *** PUEDE QUE SE REQUIERA UNO POR CADA CONTEXTO PERO ESO DEBE DEFINIRSE ***
-        //private Pila pilaExprs {get; set;}
+        private Pila pilaExprs {get; set;}
         private int actualInstrIndex {get; set;}
         
         public InstructionSet(){
@@ -53,25 +54,29 @@ namespace InstructionsNameSpace{
         }*/
         public void runLOAD_FAST(string varname){ //podría recibir el almacen del contexto en caso de que se requiera
             //busca en el almacén LOCAL el valor asociado a "varname" y lo inserta en la pila
-            almacenLocal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
-            //pilaExprs.push(val);
+            dynamic val;
+            /* val = */almacenLocal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
+            val=0;
+            pilaExprs.push(val);
         }
         public void runSTORE_FAST(string varname){ //podría recibir el almacen del contexto en caso de que se requiera
             //almacena el contenido del tope de la pila en el almacén LOCAL para la variable "varname"
             dynamic tope=0;
-            //tope == pilaExprs.pop(); //debe sacar el elemento de la pila y devolver su valor
+            tope = pilaExprs.pop(); //debe sacar el elemento de la pila y devolver su valor
             almacenLocal.setValue(varname,tope);
         }
         public void runSTORE_GLOBAL(string varname){
             //almacena el contenido del tope de la pila en el almacén GLOBAL para la variable "varname"
             dynamic tope=0;
-            //tope == pilaExprs.pop(); //debe sacar el elemento de la pila y devolver su valor
+            tope = pilaExprs.pop(); //debe sacar el elemento de la pila y devolver su valor
             almacenLocal.setValue(varname,tope);
         }
         public void runLOAD_GLOBAL(string varname){
             //busca en el almacén GLOBAL el valor asociado a "varname" y lo inserta en la pila
-            almacenGlobal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
-            //pilaExprs.push(val);
+            dynamic val;
+            /* val = */ almacenGlobal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
+            val=0;
+            pilaExprs.push(val);
         }
         public void runCALL_FUNCTION(int numparams){
             //lo referente a call function
@@ -85,10 +90,28 @@ namespace InstructionsNameSpace{
         public void runCOMPARE_OP(string op){
             //obtiene dos operandos de la pila, opera según el operador y finalmente inserta el resultados de la operación en la pila
             //se asume que los valores de los operandos son del mismo tipo, si no, se cae feo pero así debe ser... no hay mensajes de error
+            dynamic opn2= pilaExprs.pop();
+            dynamic opn1= pilaExprs.pop();
+
+            if (op.Equals("=="))
+                pilaExprs.push(opn1==opn2);
+            else if (op.Equals("!="))
+                pilaExprs.push(opn1!=opn2);
+            else if (op.Equals("<"))
+                pilaExprs.push(opn1<opn2);
+            else if (op.Equals("<="))
+                pilaExprs.push(opn1<=opn2);
+            else if (op.Equals(">"))
+                pilaExprs.push(opn1>opn2);
+            else if (op.Equals(">="))
+                pilaExprs.push(opn1>=opn2);    
         }
         public void runBINARY_SUBSTRACT(){
             //obtiene dos operandos de la pila, opera según el operador y finalmente inserta el resultados de la operación en la pila
             //se asume que los valores son enteros, si no, se cae feo pero así debe ser... no hay mensajes de error
+            dynamic opn2= pilaExprs.pop();
+            dynamic opn1= pilaExprs.pop();
+            pilaExprs.push(opn1-opn2);
         }
         public void runBINARY_ADD(){
             //obtiene dos operandos de la pila, opera según el operador y finalmente inserta el resultados de la operación en la pila
@@ -117,6 +140,7 @@ namespace InstructionsNameSpace{
         }
         public void runJUMP_ABSOLUTE(int target){
             //cambia el indice de la línea actual en ejecución a la indicada por "target"
+            actualInstrIndex=target;
         }
         public void runJUMP_IF_TRUE(int target){
             //cambia el indice de la línea actual en ejecución a la indicada por "target" en caso de que el tope de la pila sea TRUE
@@ -230,19 +254,26 @@ namespace InstructionsNameSpace{
                         case "JUMP_IF_FALSE":
                             runJUMP_IF_FALSE(instSet[actualInstrIndex].Value);
                             break;
+                }
                 actualInstrIndex++;
-                Console.WriteLine(instSet[actualInstrIndex].Key + " " + instSet[actualInstrIndex].Value);
-                } 
+                Console.WriteLine(instSet[actualInstrIndex].Key + " " + instSet[actualInstrIndex].Value); 
             }
         }
 
         public void test(){
             addInst("PUSH_GLOBAL_I","n");
             addInst("PUSH_GLOBAL_C","res");
+            addInst("DEF","test");
             addInst("LOAD_CONST",10);
             addInst("STORE_GLOBAL","n");
             addInst("LOAD_CONST",'a');
             addInst("STORE_GLOBAL","res");
+            addInst("DEF","Main");
+            addInst("LOAD_CONST",10);
+            addInst("LOAD_CONST",5);
+            addInst("BINARY_SUBSTRACT",null);
+            addInst("STORE_GLOBAL","n");
+            addInst("END",null);
         }
     }
 }
