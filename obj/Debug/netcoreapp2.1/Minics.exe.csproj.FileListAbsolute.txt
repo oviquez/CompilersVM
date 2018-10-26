@@ -42,3 +42,14 @@ C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.AssemblyInfo.cs
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.dll
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\Debug\netcoreapp2.1\Minics.exe.pdb
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\obj\Debug\netcoreapp2.1\Minics.exe.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\obj\Debug\netcoreapp2.1\Minics.exe.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\obj\Debug\netcoreapp2.1\Minics.exe.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\obj\Debug\netcoreapp2.1\Minics.exe.AssemblyInfo.cs
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\obj\Debug\netcoreapp2.1\Minics.exe.dll
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\obj\Debug\netcoreapp2.1\Minics.exe.pdb
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\bin\Debug\netcoreapp2.1\Minics.exe.deps.json
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\bin\Debug\netcoreapp2.1\Minics.exe.runtimeconfig.json
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\bin\Debug\netcoreapp2.1\Minics.exe.runtimeconfig.dev.json
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\bin\Debug\netcoreapp2.1\Minics.exe.dll
+C:\Users\Admin\Documents\CodigosC#\minics\minics.exe\bin\Debug\netcoreapp2.1\Minics.exe.pdb
