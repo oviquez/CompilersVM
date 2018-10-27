@@ -19,7 +19,7 @@ namespace InstructionsNameSpace{
             almacenLocal = new Almacen("Local");
             pilaExprs = new Pila();
             actualInstrIndex=0;
-            test();
+            //test();
         }
 
         public void addInst(string inst, dynamic param){
@@ -258,7 +258,7 @@ namespace InstructionsNameSpace{
             }
         }
 
-        public void test(){
+        /* public void test(){
             addInst("PUSH_GLOBAL_I","n");
             addInst("PUSH_GLOBAL_C","res");
             addInst("DEF","test");
@@ -272,6 +272,15 @@ namespace InstructionsNameSpace{
             addInst("BINARY_SUBSTRACT",null);
             addInst("STORE_GLOBAL","n");
             addInst("END",null);
+        }*/
+
+        public void printInstructionSet(){
+            Console.WriteLine();
+            Console.WriteLine("Set de instrucciones: ");
+           //instSet.ForEach(Console.WriteLine(""));
+            for(int i = 0; i < instSet.Count; i++){
+                Console.WriteLine(i + " " + instSet[i].Key + " " + instSet[i].Value);
+            }
         }
     }
 }
