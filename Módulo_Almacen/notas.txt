@@ -46,3 +46,13 @@
 
      */
     
+
+    /*
+    Tabla de simbolos
+
+    {id:algo, valor: int/char}
+
+    listas: global/local
+    
+    
+    */

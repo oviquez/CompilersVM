@@ -17,7 +17,7 @@ namespace DesensambladorNameSpace
             while((line = file.ReadLine()) != null)  
             {  
                 string[] palabras = line.Split(' ');
-                string instruccion = "Instrucción: ";
+                //string instruccion = "Instrucción: ";
                 if(palabras.Length == 3){
                     try
                     {

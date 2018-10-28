@@ -52,7 +52,7 @@ namespace InstructionsNameSpace{
         public void runLOAD_FAST(string varname){ //podría recibir el almacen del contexto en caso de que se requiera
             //busca en el almacén LOCAL el valor asociado a "varname" y lo inserta en la pila
             dynamic val;
-            /* val = */almacenLocal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
+            val = almacenLocal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
             val=0;
             pilaExprs.push(val);
         }
@@ -71,7 +71,7 @@ namespace InstructionsNameSpace{
         public void runLOAD_GLOBAL(string varname){
             //busca en el almacén GLOBAL el valor asociado a "varname" y lo inserta en la pila
             dynamic val;
-            /* val = */ almacenGlobal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
+            val = almacenGlobal.getValue(varname); //EL GET VALUE DEBE DEVOLVER UN VALOR PARA PODERLO CARGAR A LA PILA
             val=0;
             pilaExprs.push(val);
         }

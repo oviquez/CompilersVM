@@ -12,8 +12,7 @@ namespace AlmacenNameSpace
         public String nombre;
 
         // constructor
-        public Almacen(String nombre)
-        {
+        public Almacen(String nombre){
             this.test = new Dictionary<string, dynamic>();
             this.nombre = nombre;
         }
@@ -22,15 +21,22 @@ namespace AlmacenNameSpace
         public void setValue(string key, dynamic value){
             this.test.Add(key, value);
         }
-        // PRINT VALUE
-        public void getValue(string key){
+
+        // RETURN VALUE
+        public dynamic getValue(string key){
+            
+            dynamic result = null;
+
             foreach (dynamic item in this.test)
-                {
+            {
                     if (item.Key == key ){
                         Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+                        result = item.Value;
                     }
                     
-                }
+            }
+            return result;
+
         }
 
         // GET VALUE IF FOUND
@@ -64,12 +70,6 @@ namespace AlmacenNameSpace
                     Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
                 }
         }
-
-        
-
-        public void almacenar(){}
-
-        public void busqueda(){}
         
     }
 }
