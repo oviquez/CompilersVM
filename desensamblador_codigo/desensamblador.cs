@@ -22,7 +22,7 @@ namespace DesensambladorNameSpace
                 {
                     string[] palabras = line.Split(' ');
                     //string instruccion = "Instrucción: ";
-                    if (palabras.Length == 3)
+                    if (palabras.Length == 3) //se podría prescindir del número inicial de la instrucción pero es para control
                     {
                         try
                         {
@@ -31,8 +31,13 @@ namespace DesensambladorNameSpace
                         }
                         catch (FormatException)
                         {
-                            setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número, entonces es un string o char 
-                            //Aún falta definir qué sucede si es char
+                            char starterChar = palabras[2].ToCharArray()[0];
+                            if (starterChar == '\'')
+                                setInstrucciones.addInst(palabras[1], palabras[2].Replace("\'",""));//Si el parámetro no es un char
+                            else if ((starterChar == '"'))
+                                setInstrucciones.addInst(palabras[1], palabras[2].Replace("\"",""));//Si el parámetro no es un string
+                            else
+                                setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número válido para evitar error 
                         }
                     }
                     else
