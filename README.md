@@ -1,5 +1,4 @@
 # Minics.exe
-Proyecto en conjunto del curso compiladores 2018.
 
 Cuatro módulos principales:
 
@@ -18,4 +17,3 @@ deben llevar la "dirección" en el código que tiene dicho método.
 tres módulos anteriores
 
 Adicional a esto, se implementarán las clases que corran todo el interprete.
-.

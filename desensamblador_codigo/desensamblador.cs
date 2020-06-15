@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using InstructionsNameSpace;
+using System.IO;
 
 namespace DesensambladorNameSpace
 {
@@ -12,30 +13,38 @@ namespace DesensambladorNameSpace
         }
 
         public void desensamblar(string origen){
-            string line;
-            System.IO.StreamReader file = new System.IO.StreamReader(origen);  
-            while((line = file.ReadLine()) != null)  
-            {  
-                string[] palabras = line.Split(' ');
-                //string instruccion = "Instrucción: ";
-                if(palabras.Length == 3){
-                    try
+            FileInfo archivo = new FileInfo(origen);
+            if (archivo.Exists)
+            {
+                string line;
+                System.IO.StreamReader file = new System.IO.StreamReader(origen);
+                while ((line = file.ReadLine()) != null)
+                {
+                    string[] palabras = line.Split(' ');
+                    //string instruccion = "Instrucción: ";
+                    if (palabras.Length == 3)
                     {
-                        int param = System.Convert.ToInt32(palabras[2]);//Primero se intenta convertir el parámetro a número
-                        setInstrucciones.addInst(palabras[1], param);
+                        try
+                        {
+                            int param = System.Convert.ToInt32(palabras[2]);//Primero se intenta convertir el parámetro a número
+                            setInstrucciones.addInst(palabras[1], param);
+                        }
+                        catch (FormatException)
+                        {
+                            setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número, entonces es un string o char 
+                            //Aún falta definir qué sucede si es char
+                        }
                     }
-                    catch (FormatException)
+                    else
                     {
-                        setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número, entonces es un string o char 
-                        //Aún falta definir qué sucede si es char
+                        setInstrucciones.addInst(palabras[1], null);//La instrucción no contiene parámetro.
                     }
-                }
-                else{
-                    setInstrucciones.addInst(palabras[1], null);//La instrucción no contiene parámetro.
-                }
 
-            }  
-            file.Close();
+                }
+                file.Close();
+            }
+            else
+                Console.WriteLine("File doesn´t exists!");
         }
         
     }
