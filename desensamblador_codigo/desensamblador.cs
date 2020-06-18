@@ -40,7 +40,7 @@ namespace DesensambladorNameSpace
                                 setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número válido para evitar error 
                         }
                     }
-                    else
+                    else if (palabras.Length == 2)
                     {
                         setInstrucciones.addInst(palabras[1], null);//La instrucción no contiene parámetro.
                     }

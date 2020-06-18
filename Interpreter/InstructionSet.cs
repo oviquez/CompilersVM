@@ -27,7 +27,6 @@ namespace InstructionsNameSpace{
             almacenLocal = new List<Almacen>();
             pilaExprs = new Pila();
             actualInstrIndex=0;
-            //test();
         }
 
         public void addInst(string inst, dynamic param){
@@ -117,7 +116,6 @@ namespace InstructionsNameSpace{
 
         }
         private void runRETURN(){
-            //lo referente a return simple - DEBE AGREGARSE ESTA INSTRUCCIÓN
             actualInstrIndex = pilaExprs.pop(); //si no hay problema, el tope de la pila tiene ahora la dirección a la que de sebe "saltar" que estaba respaldada
             almacenLocal.RemoveAt(almacenLocal.Count-1); // se elimina el almacenLocaL del método
             //SI EL RETURN NO SE HACE AL FINAL, ESTO DA PROBLEMAS PORQUE PUEDE HABER COSAS EN LA PILA
@@ -186,10 +184,12 @@ namespace InstructionsNameSpace{
             dynamic opn1= pilaExprs.pop();
             pilaExprs.push(opn1&&opn2);
         }
-        //PUEDE QUE ESTA NO SE OCUPE
         private void runBINARY_MODULO(){
             //obtiene dos operandos de la pila, opera según el operador y finalmente inserta el resultados de la operación en la pila
             //se asume que los valores son enteros, si no, se cae feo pero así debe ser... no hay mensajes de error
+            dynamic opn2= pilaExprs.pop();
+            dynamic opn1= pilaExprs.pop();
+            pilaExprs.push(opn1%opn2);
         }
         private void runJUMP_ABSOLUTE(int target){
             //cambia el indice de la línea actual en ejecución a la indicada por "target"
@@ -317,29 +317,12 @@ namespace InstructionsNameSpace{
                         case "JUMP_IF_FALSE":
                             runJUMP_IF_FALSE(instSet[actualInstrIndex].Value);
                             break;
+                        default:
+                            throw new Exception("Instrucción no conocida");
                 }
                 //Console.WriteLine("["+instSet[actualInstrIndex].Key + " " + instSet[actualInstrIndex].Value+"]"); 
                 actualInstrIndex++; 
             }
-        }
-
-         private void test(){
-            addInst("PUSH_GLOBAL_I","n");
-            addInst("PUSH_GLOBAL_C","res");
-            addInst("DEF","test");
-            addInst("LOAD_CONST",10);
-            addInst("STORE_GLOBAL","n");
-            addInst("LOAD_CONST",'a');
-            addInst("STORE_GLOBAL","res");
-            addInst("DEF","Main");
-            addInst("LOAD_CONST",10);
-            addInst("LOAD_CONST",5);
-            addInst("BINARY_SUBSTRACT",null);
-            addInst("STORE_GLOBAL","n");
-            addInst("LOAD_GLOBAL","n");
-            addInst("LOAD_GLOBAL","write");
-            addInst("CALL_FUNCTION",1);
-            addInst("END",null);
         }
 
         public void printInstructionSet(){

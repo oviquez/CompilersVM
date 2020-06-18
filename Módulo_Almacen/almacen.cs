@@ -6,20 +6,20 @@ namespace AlmacenNameSpace
 
 
         // PRELIMINARY DATA STRUCTURE:
-        Dictionary<string, dynamic> test;
+        Dictionary<string, dynamic> data;
 
         // -----------------------------
-        public String nombre;
+        private String name;
 
         // constructor
-        public Almacen(String nombre){
-            this.test = new Dictionary<string, dynamic>();
-            this.nombre = nombre;
+        public Almacen(String name){
+            this.data = new Dictionary<string, dynamic>();
+            this.name = name;
         }
 
         // ADD VALUE TO THE DICTIONARY
         public void setValue(string key, dynamic value){
-            this.test.Add(key, value);
+            this.data.Add(key, value);
         }
 
         // RETURN VALUE
@@ -27,7 +27,7 @@ namespace AlmacenNameSpace
             
             dynamic result = null;
 
-            foreach (dynamic item in this.test)
+            foreach (dynamic item in this.data)
             {
                     if (item.Key == key ){
                         //Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
@@ -42,7 +42,7 @@ namespace AlmacenNameSpace
         // GET VALUE IF FOUND
         public bool searchValue(string key){
 
-            if(this.test.ContainsKey(key)){
+            if(this.data.ContainsKey(key)){
                 //Console.WriteLine(key + " ITEM FOUND");
                 return true;
             }
@@ -57,7 +57,7 @@ namespace AlmacenNameSpace
                 Console.WriteLine("404 Item not found!");
             }
             else{
-                this.test[key] = newValue;
+                this.data[key] = newValue;
                 //Console.WriteLine(key + " ITEM UPDATED!");
             
             }
@@ -65,7 +65,7 @@ namespace AlmacenNameSpace
 
         // PRINT DICTIONARY
         public void printContainer(){
-            foreach (dynamic item in this.test)
+            foreach (dynamic item in this.data)
                 {
                     Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
                 }

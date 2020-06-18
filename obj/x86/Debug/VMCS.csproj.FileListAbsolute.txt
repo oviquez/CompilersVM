@@ -17,3 +17,4 @@ C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_C
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\obj\x86\Debug\VMCS.csprojResolveAssemblyReference.cache
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\obj\x86\Debug\Minics.exe
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\obj\x86\Debug\Minics.pdb
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\desensamblador_codigo\prueba.txt
