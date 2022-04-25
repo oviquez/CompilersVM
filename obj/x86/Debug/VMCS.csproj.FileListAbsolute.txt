@@ -1,20 +1,11 @@
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\Minics.exe
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\bin\Debug\Minics.pdb
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\x86\Debug\Minics.exe
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\x86\Debug\Minics.pdb
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre\VM_CS\obj\x86\Debug\VMCS.csprojResolveAssemblyReference.cache
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre (Mini C#)\VM_CS - copia\bin\Debug\Minics.exe
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre (Mini C#)\VM_CS - copia\bin\Debug\Minics.pdb
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre (Mini C#)\VM_CS - copia\obj\x86\Debug\VMCS.csprojResolveAssemblyReference.cache
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre (Mini C#)\VM_CS - copia\obj\x86\Debug\Minics.exe
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre (Mini C#)\VM_CS - copia\obj\x86\Debug\Minics.pdb
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2018\II Semestre (Mini C#)\VM_CS - copia\bin\Debug\desensamblador_codigo\text.txt
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\desensamblador_codigo\fact_iter.txt
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\desensamblador_codigo\test2.txt
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\desensamblador_codigo\text.txt
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\Minics.exe
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\Minics.pdb
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\obj\x86\Debug\VMCS.csprojResolveAssemblyReference.cache
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\obj\x86\Debug\Minics.exe
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\obj\x86\Debug\Minics.pdb
-C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\2020\I Semestre\VM_CS\bin\Debug\desensamblador_codigo\prueba.txt
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\desensamblador_codigo\fact_iter.txt
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\desensamblador_codigo\test2.txt
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\desensamblador_codigo\text.txt
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\MiniPY.exe.config
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\MiniPY.exe
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\MiniPY.pdb
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\VMCS.csproj.AssemblyReference.cache
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\VMCS.csproj.SuggestedBindingRedirects.cache
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\VMCS.csproj.CoreCompileInputs.cache
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\MiniPY.exe
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\MiniPY.pdb

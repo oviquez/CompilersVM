@@ -23,7 +23,7 @@ namespace InstructionsNameSpace{
         public InstructionSet(){
             instSet = new List<KeyValuePair<string,dynamic>>() ;
             almacenGlobal = new Almacen("Global");
-            almacenGlobal.setValue("write",-1);//por defecto se agrega el método write al almacen global
+            almacenGlobal.setValue("print",-1);//por defecto se agrega el método write al almacen global
             almacenLocal = new List<Almacen>();
             pilaExprs = new Pila();
             actualInstrIndex=0;
@@ -147,6 +147,16 @@ namespace InstructionsNameSpace{
             //se asume que los valores son enteros, si no, se cae feo pero así debe ser... no hay mensajes de error
             dynamic opn2= pilaExprs.pop();
             dynamic opn1= pilaExprs.pop();
+            /*dynamic v1 = null;
+            dynamic v2 = null;
+            v1 = 3.14;
+
+            v2 = "hola";
+            
+            Type t1 = ((object)v1).GetType();
+            Type t2 = ((object)v2).GetType();
+            Console.WriteLine(t1.Name);
+            Console.WriteLine(t2.Name);*/
             pilaExprs.push(opn1-opn2);
         }
         private void runBINARY_ADD(){
