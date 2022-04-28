@@ -1,7 +1,7 @@
 0 DEF calcularFac
-1 PUSH_LOCAL_I n
-2 PUSH_LOCAL_I resultado
-3 PUSH_LOCAL_I i
+1 PUSH_LOCAL n
+2 PUSH_LOCAL resultado
+3 PUSH_LOCAL i
 4 LOAD_CONST 1
 5 STORE_FAST resultado
 6 LOAD_CONST 0

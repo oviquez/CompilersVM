@@ -33,31 +33,18 @@ namespace InstructionsNameSpace{
             instSet.Add(new KeyValuePair<string, dynamic>(inst,param));
         }
 
-        private void runPUSH_LOCAL_I(string name){ //podría recibir el almacen del contexto en caso de que se requiera
+        private void runPUSH_LOCAL(string name){ //podría recibir el almacen del contexto en caso de que se requiera
             if(actualParamList.Count!=0){ 
                 almacenLocal[almacenLocal.Count-1].setValue(name,actualParamList[0]); //el valor por defecto es el parámetro actual de turno
                 actualParamList.RemoveAt(0); //se elimina el parámetro actual de turno
             }
             else
                 //declara el elemento "name" en el almacen LOCAL con valor por defecto 0
-                almacenLocal[almacenLocal.Count-1].setValue(name,0);
+                almacenLocal[almacenLocal.Count-1].setValue(name,null);
         }
-        private void runPUSH_LOCAL_C(string name){ //podría recibir el almacen del contexto en caso de que se requiera
-            if(actualParamList.Count!=0){ 
-                almacenLocal[almacenLocal.Count-1].setValue(name,actualParamList[0]); //el valor por defecto es el parámetro actual de turno
-                actualParamList.RemoveAt(0); //se elimina el parámetro actual de turno
-            }
-            else
-                //declara el elemento "name" en el almacen LOCAL con valor por defecto ''
-                almacenLocal[almacenLocal.Count-1].setValue(name,' ');
-        }
-        private void runPUSH_GLOBAL_I(string name){
+        private void runPUSH_GLOBAL(string name){
             //declara el elemento "name" en el almacen GLOBAL con valor por defecto 0
-            almacenGlobal.setValue(name,0);
-        }
-        private void runPUSH_GLOBAL_C(string name){
-            //declara el elemento "name" en el almacen GLOBAL con valor por defecto ''
-            almacenLocal[almacenLocal.Count-1].setValue(name,' ');
+            almacenGlobal.setValue(name,null);
         }
         private void runDEF(string name){
             almacenGlobal.setValue(name,actualInstrIndex); //+1 porque la primer instrucción del método es el siguiente index
@@ -222,15 +209,11 @@ namespace InstructionsNameSpace{
         public void run(){
             while (actualInstrIndex <= instSet.Count-1)
             {
-                if (instSet[actualInstrIndex].Key.Equals("PUSH_GLOBAL_I")||
-                instSet[actualInstrIndex].Key.Equals("PUSH_GLOBAL_C")||
+                if (instSet[actualInstrIndex].Key.Equals("PUSH_GLOBAL")||
                 instSet[actualInstrIndex].Key.Equals("DEF")){
                     switch(instSet[actualInstrIndex].Key){
-                        case "PUSH_GLOBAL_I": 
+                        case "PUSH_GLOBAL": 
                             almacenGlobal.setValue(instSet[actualInstrIndex].Value,0);                            
-                            break;
-                        case "PUSH_GLOBAL_C": 
-                            almacenGlobal.setValue(instSet[actualInstrIndex].Value,' ');                            
                             break;
                         case "DEF": 
                             if (instSet[actualInstrIndex].Value.Equals("Main")){
@@ -255,17 +238,11 @@ namespace InstructionsNameSpace{
             while (actualInstrIndex <= instSet.Count-1)
             {
                 switch(instSet[actualInstrIndex].Key){
-                        case "PUSH_LOCAL_I":
-                            runPUSH_LOCAL_I(instSet[actualInstrIndex].Value);
+                        case "PUSH_LOCAL":
+                            runPUSH_LOCAL(instSet[actualInstrIndex].Value);
                             break;
-                        case "PUSH_LOCAL_C":
-                            runPUSH_LOCAL_C(instSet[actualInstrIndex].Value);
-                            break;
-                        case "PUSH_GLOBAL_I":
-                            runPUSH_GLOBAL_I(instSet[actualInstrIndex].Value);
-                            break;
-                        case "PUSH_GLOBAL_C":
-                            runPUSH_GLOBAL_C(instSet[actualInstrIndex].Value);
+                        case "PUSH_GLOBAL":
+                            runPUSH_GLOBAL(instSet[actualInstrIndex].Value);
                             break;
                         case "LOAD_CONST":
                             runLOAD_CONST(instSet[actualInstrIndex].Value);
