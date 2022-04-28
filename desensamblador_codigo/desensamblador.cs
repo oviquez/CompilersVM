@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using InstructionsNameSpace;
 using System.IO;
@@ -21,6 +22,18 @@ namespace DesensambladorNameSpace
             this.setInstrucciones = setInstrucciones;
         }
 
+        private string pegarCadenas(string[] array)
+        {
+            string result="";
+            foreach (string s in array)
+            {
+                if (s != "")
+                    result += s;
+            }
+
+            return result;
+        }
+        
         public void desensamblar(string origen){
             FileInfo archivo = new FileInfo(origen);
             if (archivo.Exists)
@@ -45,10 +58,14 @@ namespace DesensambladorNameSpace
                                 setInstrucciones.addInst(palabras[1], palabras[2].Replace("\'",""));//Si el parámetro no es un char
                             else if ((starterChar == '"'))
                             {
-                                string[] cadena = palabras.SubArray(2, palabras.Length - 2);
-                                Console.WriteLine(cadena);
-                                //string.Join(' ', cadena);
-                                setInstrucciones.addInst(palabras[1], cadena );//Si el parámetro no es un string
+                                List<string> pals = palabras.SubArray(2, palabras.Length - 2).ToList();
+                                for(int i = 0; i < pals.Count-1; i++)
+                                {
+                                    if (pals[i] == "")
+                                        pals[i]=" ";
+                                } 
+                                string cadena = string.Join(" ",pals. FindAll(s => s != "")).Replace("\"","");
+                                setInstrucciones.addInst(palabras[1], cadena);//Si el parámetro no es un string
                             }
                             else
                                 setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número válido para evitar error 

@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <StartArguments>.\desensamblador_codigo\fact_iter.txt</StartArguments>
+    <StartArguments>.\desensamblador_codigo\pruebas.txt</StartArguments>
   </PropertyGroup>
 </Project>
