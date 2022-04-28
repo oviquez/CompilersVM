@@ -9,3 +9,4 @@ C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion 
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\VMCS.csproj.CoreCompileInputs.cache
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\MiniPY.exe
 C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\obj\x86\Debug\MiniPY.pdb
+C:\Users\oviquez\Documents\00.Cursos\Compiladores (IC-5701)\Material\generacion de codigo\VMs\VMCS\bin\Debug\desensamblador_codigo\pruebas.txt

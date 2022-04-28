@@ -5,6 +5,15 @@ using System.IO;
 
 namespace DesensambladorNameSpace
 {
+    public static class Extensions
+    {
+        public static T[] SubArray<T>(this T[] array, int offset, int length)
+        {
+            T[] result = new T[length];
+            Array.Copy(array, offset, result, 0, length);
+            return result;
+        }
+    }
     class Desensamblador
     {   
         public InstructionSet setInstrucciones;
@@ -22,7 +31,7 @@ namespace DesensambladorNameSpace
                 {
                     string[] palabras = line.Split(' ');
                     //string instruccion = "Instrucción: ";
-                    if (palabras.Length == 3) //se podría prescindir del número inicial de la instrucción pero es para control
+                    if (palabras.Length >= 3) //se podría prescindir del número inicial de la instrucción pero es para control
                     {
                         try
                         {
@@ -35,7 +44,12 @@ namespace DesensambladorNameSpace
                             if (starterChar == '\'')
                                 setInstrucciones.addInst(palabras[1], palabras[2].Replace("\'",""));//Si el parámetro no es un char
                             else if ((starterChar == '"'))
-                                setInstrucciones.addInst(palabras[1], palabras[2].Replace("\"",""));//Si el parámetro no es un string
+                            {
+                                string[] cadena = palabras.SubArray(2, palabras.Length - 2);
+                                Console.WriteLine(cadena);
+                                //string.Join(' ', cadena);
+                                setInstrucciones.addInst(palabras[1], cadena );//Si el parámetro no es un string
+                            }
                             else
                                 setInstrucciones.addInst(palabras[1], palabras[2]);//Si el parámetro no es un número válido para evitar error 
                         }
