@@ -44,7 +44,7 @@ namespace InstructionsNameSpace{
         }
         private void runPUSH_GLOBAL(string name){
             //declara el elemento "name" en el almacen GLOBAL con valor por defecto 0
-            almacenGlobal.setValue(name,null);
+            almacenGlobal.setValue(name,0);
         }
         private void runDEF(string name){
             almacenGlobal.setValue(name,actualInstrIndex); //+1 porque la primer instrucción del método es el siguiente index
@@ -218,8 +218,9 @@ namespace InstructionsNameSpace{
                         case "DEF": 
                             if (instSet[actualInstrIndex].Value.Equals("Main")){
                                 actualInstrIndex++; //se incrementa para que contenga la primera línea de código del Main
+                                almacenLocal.Add(new Almacen("Local"));//SE CREA ALMACEN LOCAL PARA EL MAIN
                                 runMain();
-                                return; //espero que sea break del ciclo y no del switch
+                                return; 
                             }
                             else
                                 runDEF(instSet[actualInstrIndex].Value);
