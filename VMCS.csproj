@@ -196,7 +196,6 @@
     <Content Include="desensamblador_codigo\text.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Módulo_Almacen\notas.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\refs\tags\" />
