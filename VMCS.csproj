@@ -181,6 +181,9 @@
     <Content Include="desensamblador_codigo\a.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="desensamblador_codigo\b.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="desensamblador_codigo\fact_iter.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
