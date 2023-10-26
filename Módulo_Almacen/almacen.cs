@@ -30,7 +30,6 @@ namespace AlmacenNameSpace
             foreach (dynamic item in this.data)
             {
                     if (item.Key == key ){
-                        //Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
                         result = item.Value;
                     }
                     
@@ -43,7 +42,6 @@ namespace AlmacenNameSpace
         public bool searchValue(string key){
 
             if(this.data.ContainsKey(key)){
-                //Console.WriteLine(key + " ITEM FOUND");
                 return true;
             }
             return false;
@@ -58,8 +56,6 @@ namespace AlmacenNameSpace
             }
             else{
                 this.data[key] = newValue;
-                //Console.WriteLine(key + " ITEM UPDATED!");
-            
             }
         }
 

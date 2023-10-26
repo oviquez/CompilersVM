@@ -129,21 +129,11 @@ namespace InstructionsNameSpace{
             else if (op.Equals(">="))
                 pilaExprs.push(opn1>=opn2);    
         }
-        private void runBINARY_SUBSTRACT(){
+        private void runBINARY_SUBTRACT(){
             //obtiene dos operandos de la pila, opera según el operador y finalmente inserta el resultados de la operación en la pila
             //se asume que los valores son enteros, si no, se cae feo pero así debe ser... no hay mensajes de error
             dynamic opn2= pilaExprs.pop();
             dynamic opn1= pilaExprs.pop();
-            /*dynamic v1 = null;
-            dynamic v2 = null;
-            v1 = 3.14;
-
-            v2 = "hola";
-            
-            Type t1 = ((object)v1).GetType();
-            Type t2 = ((object)v2).GetType();
-            Console.WriteLine(t1.Name);
-            Console.WriteLine(t2.Name);*/
             pilaExprs.push(opn1-opn2);
         }
         private void runBINARY_ADD(){
@@ -227,9 +217,8 @@ namespace InstructionsNameSpace{
                             break;
                         
 
-                    //debería llamarse a runXXXXX de cada instrucción para toda la lista en orden ascendente
+                    //solo dos instrucciones para el inicio de la corrida... si se agregan más cosas, serían elementos adicionales a la primer pasada del bitecode
                     }
-                    //Console.WriteLine("["+instSet[actualInstrIndex].Key + " " + instSet[actualInstrIndex].Value+"]");
                 }
                 actualInstrIndex++;
             }
@@ -275,8 +264,8 @@ namespace InstructionsNameSpace{
                         case "COMPARE_OP":
                             runCOMPARE_OP(instSet[actualInstrIndex].Value);
                             break;
-                        case "BINARY_SUBSTRACT":
-                            runBINARY_SUBSTRACT();
+                        case "BINARY_SUBTRACT":
+                            runBINARY_SUBTRACT();
                             break;
                         case "BINARY_ADD":
                             runBINARY_ADD();
@@ -308,7 +297,6 @@ namespace InstructionsNameSpace{
                         default:
                             throw new Exception("Instrucción no conocida");
                 }
-                //Console.WriteLine("["+instSet[actualInstrIndex].Key + " " + instSet[actualInstrIndex].Value+"]"); 
                 actualInstrIndex++; 
             }
         }
